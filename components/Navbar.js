@@ -50,11 +50,17 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-white border-t px-6 py-6 space-y-6">
-          <Link href="/" onClick={() => setOpen(false)}>Acasă</Link>
-          <Link href="/servicii" onClick={() => setOpen(false)}>Servicii & Prețuri</Link>
-          <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
-        </div>
+        <div className="md:hidden bg-white border-t py-6 px-6 flex flex-col space-y-6">
+  <Link href="/" onClick={() => setOpen(false)} className="block">
+    Acasă
+  </Link>
+  <Link href="/servicii" onClick={() => setOpen(false)} className="block">
+    Servicii & Prețuri
+  </Link>
+  <Link href="/contact" onClick={() => setOpen(false)} className="block">
+    Contact
+  </Link>
+</div>
       )}
     </nav>
   );
