@@ -65,16 +65,19 @@ export default function Navbar() {
       </Link>
     </div>
 
-    {/* Buton jos */}
-    <div className="mt-auto flex justify-center pt-8">
-      <a
-        href="tel:0770457197"
-        className="bg-[#3b885e] hover:bg-[#2f6f4c] text-white px-6 py-3 rounded-2xl font-semibold shadow-md transition flex items-center gap-2"
-      >
-        <Phone size={18} />
-        Sună
-      </a>
-    </div>
+    {/* Buton */}
+<div className="mt-10">
+  <a
+    href="tel:0770457197"
+    className="w-full bg-[#3b885e] hover:bg-[#2f6f4c] text-white py-4 rounded-2xl font-semibold shadow-md transition flex items-center justify-center gap-2"
+  >
+    <Phone size={18} />
+    Sună
+  </a>
+</div>
 
   </div>
 )}
+    </nav>
+  );
+}
