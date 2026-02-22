@@ -50,18 +50,31 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-white border-t py-6 px-6 flex flex-col space-y-6">
-  <Link href="/" onClick={() => setOpen(false)} className="block">
-    Acasă
-  </Link>
-  <Link href="/servicii" onClick={() => setOpen(false)} className="block">
-    Servicii & Prețuri
-  </Link>
-  <Link href="/contact" onClick={() => setOpen(false)} className="block">
-    Contact
-  </Link>
-</div>
-      )}
-    </nav>
-  );
-}
+  <div className="md:hidden bg-white border-t px-6 py-8 flex flex-col min-h-[300px]">
+    
+    {/* Linkuri */}
+    <div className="flex flex-col gap-6">
+      <Link href="/" onClick={() => setOpen(false)}>
+        Acasă
+      </Link>
+      <Link href="/servicii" onClick={() => setOpen(false)}>
+        Servicii & Prețuri
+      </Link>
+      <Link href="/contact" onClick={() => setOpen(false)}>
+        Contact
+      </Link>
+    </div>
+
+    {/* Buton jos */}
+    <div className="mt-auto flex justify-center pt-8">
+      <a
+        href="tel:0770457197"
+        className="bg-[#3b885e] hover:bg-[#2f6f4c] text-white px-6 py-3 rounded-2xl font-semibold shadow-md transition flex items-center gap-2"
+      >
+        <Phone size={18} />
+        Sună
+      </a>
+    </div>
+
+  </div>
+)}
