@@ -45,7 +45,7 @@ export function Footer() {
           </div>
           <div className="flex md:justify-end items-center gap-3">
             <Mail className="text-[#3b885e]" />
-            <a href="mailto:siacleaning@gmail.com" className="hover:underline">siacleaning@gmail.com</a>
+            <a href="mailto:siacleaningcraiova@gmail.com" className="hover:underline">siacleaningcraiova@gmail.com</a>
           </div>
 
           <div className="flex md:justify-end gap-4 pt-4">

@@ -6,6 +6,11 @@ export const metadata = {
   title: "Curățenie profesională în Craiova | SIA Cleaning",
   description:
     "Firmă de curățenie în Craiova. Oferim curățenie rezidențială, birouri, Airbnb și post-construcție. Intervenții rapide și prețuri corecte.",
+
+  icons: {
+    icon: "/favicon.ico",
+  },
+
   keywords: [
     "curatenie Craiova",
     "firma curatenie Craiova",
@@ -13,6 +18,7 @@ export const metadata = {
     "curatenie birouri Craiova",
     "curatenie dupa renovare Craiova"
   ],
+
   openGraph: {
     title: "Curățenie profesională în Craiova | SIA Cleaning",
     description:

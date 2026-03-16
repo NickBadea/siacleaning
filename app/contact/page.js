@@ -16,10 +16,32 @@ export default function ContactPage() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Mesaj trimis (demo)");
-  };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const res = await fetch("/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(form),
+  });
+
+  const data = await res.json();
+
+  if (data.success) {
+    alert("Mesaj trimis cu succes!");
+    setForm({
+      nume: "",
+      telefon: "",
+      email: "",
+      mesaj: "",
+      serviciu: "",
+    });
+  } else {
+    alert("Eroare la trimitere.");
+  }
+};
 
   return (
     <div className="py-24 px-6 md:px-12 max-w-6xl mx-auto">
@@ -127,7 +149,7 @@ export default function ContactPage() {
 
               <div className="flex items-center gap-4">
                 <Mail className="text-[#3b885e]" />
-                siacleaning@gmail.com
+                siacleaningcraiova@gmail.com
               </div>
             </div>
           </div>
@@ -136,9 +158,9 @@ export default function ContactPage() {
             <h3 className="font-semibold mb-4">Ne găsești și pe:</h3>
             <div className="flex gap-4">
               {[
-              { icon: Facebook, link: "https://facebook.com" },
-              { icon: Instagram, link: "https://instagram.com" },
-              { icon: Music2, link: "https://tiktok.com" },
+              { icon: Facebook, link: "https://facebook.com/siacleaning.ro" },
+              { icon: Instagram, link: "https://instagram.com/siacleaning.ro" },
+              { icon: Music2, link: "https://tiktok.com/siacleaning.ro" },
             ].map((item, index) => {
               const Icon = item.icon;
               return (
