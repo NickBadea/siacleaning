@@ -25,7 +25,7 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-12 font-medium">
           <Link href="/">Acasă</Link>
-          <Link href="/servicii">Servicii & Prețuri</Link>
+          <Link href="/servicii">Servicii</Link>
           <Link href="/contact">Contact</Link>
         </div>
 
